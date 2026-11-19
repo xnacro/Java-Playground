@@ -9,12 +9,31 @@ public class LinkedList {
             this.next = null;
         }
     }
-    // reference variable 
+    // reference variables 
     public static Node head;
     public static Node tail;
+
+    // Add - First
+    public void addFirst(int data) {
+        // create new node
+        Node newNode = new Node(data);   
+        
+        // if list is empty
+        if(head == null) {
+            head = tail = newNode;
+            return;
+        }
+        
+        // new node next = head
+        newNode.next = head;
+        // head = newNode
+        head = newNode;
+    }
 
     
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
+        ll.addFirst(2);
+        ll.addFirst(1);
     }
 }
