@@ -28,12 +28,30 @@ public class LinkedList {
         newNode.next = head;
         // head = newNode
         head = newNode;
-    }
+    } 
+ 
+    //Add - last
+     public void addLast(int data) {
 
+        Node newNode = new Node(data); 
+
+        // if list is empty
+        if(head == null) {
+            head = tail = newNode;
+            return;
+        }
+        // tail.next = newNode
+        tail.next = newNode;
+
+        // tail = newNode     
+        tail = newNode;
+     }
     
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
         ll.addFirst(2);
         ll.addFirst(1);
+        ll.addLast(4);
+        ll.addLast(5);
     }
 }
