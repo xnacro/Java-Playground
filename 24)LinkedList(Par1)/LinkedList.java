@@ -47,15 +47,30 @@ public class LinkedList {
         tail = newNode;
      }
 
-     // Print a Linked List
-
-     
+     // Print a Linked list
+     public void printList() {     
+        if(head == null) {
+            System.out.println("LinkedList is empty");
+            return;
+        }
+        Node temp = head;
+        while(temp != null) {
+            System.out.print(temp.data + " -> ");
+            temp = temp.next;
+        }
+        System.out.println("null");
+     }
     
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
+        ll.printList();
         ll.addFirst(2);
+        ll.printList();
         ll.addFirst(1);
+        ll.printList();
         ll.addLast(4);
+        ll.printList();
         ll.addLast(5);
+        ll.printList();
     }
 }
