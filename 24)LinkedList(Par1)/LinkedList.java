@@ -46,6 +46,10 @@ public class LinkedList {
         // tail = newNode     
         tail = newNode;
      }
+
+     // Print a Linked List
+
+     
     
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
