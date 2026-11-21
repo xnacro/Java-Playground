@@ -45,7 +45,12 @@ public class LinkedList {
 
         // tail = newNode     
         tail = newNode;
-     }
+     } 
+     
+    // Add element in the middle at any idx
+    public void addMiddle(int idx, int data) {
+
+    }
 
      // Print a Linked list
      public void printList() {     
