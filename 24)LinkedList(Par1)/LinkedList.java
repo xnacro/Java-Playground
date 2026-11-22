@@ -115,7 +115,20 @@ public class LinkedList {
         return val;
 
     }
+    // iterative approach(linear search) 
+    public int iSearch(int key) {
+        Node temp = head;
+        int i = 0;
 
+        while(temp != null) {
+            if(temp.data == key) {
+                return i;
+            }
+            temp = temp.next;
+            i++;
+        }
+        return -1;
+    }
      // Print a Linked list
      public void printList() {     
         if(head == null) {
@@ -149,6 +162,7 @@ public class LinkedList {
 
         ll.removeLast();
         ll.printList();
-
+        System.out.println(ll.iSearch(3));
+        System.out.println(ll.iSearch(4));     
     }
 }
