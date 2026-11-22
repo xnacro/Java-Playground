@@ -12,12 +12,13 @@ public class LinkedList {
     // reference variables 
     public static Node head;
     public static Node tail;
+    public static int size;
 
     // Add - First
     public void addFirst(int data) {
         // create new node
         Node newNode = new Node(data);   
-        
+        size++;
         // if list is empty
         if(head == null) {
             head = tail = newNode;
@@ -34,7 +35,7 @@ public class LinkedList {
      public void addLast(int data) {
 
         Node newNode = new Node(data); 
-
+        size++;
         // if list is empty
         if(head == null) {
             head = tail = newNode;
@@ -54,6 +55,7 @@ public class LinkedList {
             return;
         }
         Node newNode = new Node(data);
+        size++;
         Node temp = head;
 
         int i = 0;
@@ -96,5 +98,6 @@ public class LinkedList {
         ll.printList();
         ll.addMiddle(3,5);
         ll.printList();
+        System.out.println(ll.size);
     }
 }
