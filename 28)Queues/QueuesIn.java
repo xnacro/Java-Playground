@@ -42,7 +42,18 @@ public class QueuesIn {
             rear -= 1;
             return front;
         }
+
+        // peek operation
+        public static void peek() {
+            if(isEmpty()) {
+                System.out.println("Queue is empty");
+                return;
+            }
+
+            System.out.println(arr[0]);     
+        }
     }
+
 
     public static void main(String[] args) {
         Queue q = new Queue(5);
@@ -52,6 +63,7 @@ public class QueuesIn {
 
         while(!q.isEmpty()) {
             System.out.println("Removed = " + q.remove());
+            q.peek();     
         }
     }
 }
